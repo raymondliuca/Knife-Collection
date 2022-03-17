@@ -1,16 +1,16 @@
-<h1> <%= welcomeMessage %> </h1>
+<h1><%= style.name %></h1>
 
 <div class="container">
     <div class="row">
-        <% brands.forEach(function(brand) { %>
+        <% knifes.forEach(function(knife) { %>
             <div class="col">
                 <div class="img">
-                    <img calss="img_size" src="<%= brand.logo %>" >
+                    <img calss="img_size" src="<%= knife.picture %>" >
                 </div>
             </div>
             <div class="name">
-                <a href="/:id=<%= brand.id %>">
-                    <%= brand.name %>
+                <a href="/knife/:id=<%= knife.id %>">
+                    <%= knife.length %>
                 </a>
             </div>
         <% }) %>

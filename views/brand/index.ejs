@@ -1,18 +1,19 @@
-<h1> <%= welcomeMessage %> </h1>
+<h1><%= brand.name %></h1>
 
 <div class="container">
     <div class="row">
-        <% brands.forEach(function(brand) { %>
+        <% styles.forEach(function(style) { %>
             <div class="col">
                 <div class="img">
-                    <img calss="img_size" src="<%= brand.logo %>" >
+                    <img calss="img_size" src="<%= style.picture %>" >
                 </div>
             </div>
             <div class="name">
-                <a href="/:id=<%= brand.id %>">
-                    <%= brand.name %>
+                <a href="/style/:id=<%= style.id %>">
+                    <%= style.name %>
                 </a>
             </div>
         <% }) %>
     </div>
 </div> 
+
