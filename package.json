@@ -1,13 +1,14 @@
 {
   "name": "project2",
   "version": "1.0.0",
+  "description": "knife collection",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon server",
+    "start": "node server"
   },
   "author": "Rui Liu",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "connect-flash": "^0.1.1",
     "dotenv": "^16.0.0",
