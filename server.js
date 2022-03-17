@@ -7,17 +7,20 @@ const PORT = process.env.PORT;
 
 const app = express();
 
+app.use(express.urlencoded());
 app.use(express.static('public'));
 const expressLayouts = require("express-ejs-layouts");
 app.use(expressLayouts);
+app.set("view engine", "ejs");
 
 
 const indexRoute = require('./routes/index');
-
+const brandRoute = require('./routes/brand');
 
 app.use('/', indexRoute);
+app.use('/', brandRoute);
 
-app.set("view engine", "ejs");
+
 
 mongoose.connect(process.env.mongoDBURL, {
     useNewUrlParser: true,

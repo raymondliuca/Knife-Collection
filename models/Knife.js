@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const knifeSchema = mongoose.Schema(
     {
         name: String,
-        picture: URL,
+        picture: String,
         length: String,
         price: Number,
         style: {

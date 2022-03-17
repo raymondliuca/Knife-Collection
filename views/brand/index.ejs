@@ -4,14 +4,16 @@
     <div class="row">
         <% styles.forEach(function(style) { %>
             <div class="col">
-                <div class="img">
-                    <img calss="img_size" src="<%= style.picture %>" >
+                <div class="card">
+                    <div class="card_img img_size">
+                        <img calss="img_size" src="<%= style.picture %>" >
+                    </div>
+                    <div class="name">
+                        <a href="/:id=<%= style.id %>">
+                            <%= style.name %>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="name">
-                <a href="/style/:id=<%= style.id %>">
-                    <%= style.name %>
-                </a>
             </div>
         <% }) %>
     </div>

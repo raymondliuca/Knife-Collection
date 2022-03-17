@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const styleSchema = mongoose.Schema(
     {
         name: String,
-        picture: URL,
+        picture: String,
         material: String,
         handle: String,
         description: String,

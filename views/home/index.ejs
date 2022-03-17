@@ -1,17 +1,20 @@
 <h1> <%= welcomeMessage %> </h1>
 
+
 <div class="container">
     <div class="row">
         <% brands.forEach(function(brand) { %>
             <div class="col">
-                <div class="img">
-                    <img calss="img_size" src="<%= brand.logo %>" >
+                <div class="card">
+                    <div class="card_img img_size">
+                        <img calss="img_size" src="<%= brand.logo %>" >
+                    </div>
+                    <div class="name">
+                        <a href="/:id=<%= brand.id %>">
+                            <%= brand.name %>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="name">
-                <a href="/:id=<%= brand.id %>">
-                    <%= brand.name %>
-                </a>
             </div>
         <% }) %>
     </div>

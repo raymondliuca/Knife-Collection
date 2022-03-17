@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const brandSchema = mongoose.Schema(
     {
         name: String,
-        logo: URL,
+        logo: String,
         description: String,
         styles: [ {
         type: mongoose.Schema.Types.ObjectId,
