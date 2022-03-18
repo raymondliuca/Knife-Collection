@@ -1,5 +1,9 @@
 <h1><%= brand.name %></h1>
 
+<div class="delete" >
+    <a href='/brand/<%= brand.id %>/delete'> Delete </a>
+    <a href='/brand/<%= brand.id %>/edit'> Edit </a>
+</div>
 <div class="container">
     <div class="row">
         <% knifes.forEach(function(knife) { %>

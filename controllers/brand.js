@@ -11,7 +11,7 @@ exports.brand_create_post = (req, res) => {
 
     brand.save()
     .then(() => {
-        res.redirect("../");
+        res.redirect("/brands");
     })
     .catch((err) => {
         console.log(err);
@@ -40,5 +40,36 @@ exports.brand_show_get = (req, res) => {
     .catch(err => {
         console.log(err);
     });
+};
+
+exports.brand_delete_get = (req, res) => {
+    console.log(req.params.id);
+    Brand.findByIdAndDelete(req.params.id)
+    .then(() => {
+        res.redirect("/brands")
+    })
+    .catch(err => {
+        console.log(err);
+    })
+};
+
+exports.brand_edit_get = (req, res) =>{
+    Brand.findById(req.params.id)
+    .then((brand) => {
+        res.render("brand/edit", {brand})
+    })
+    .catch(err => {c
+        console.log(err);
+    })
+};
+
+exports.brand_update_put = (req, res) => {
+    Brand.findByIdAndUpdate(req.body.id, req.body)
+    .then(() => {
+        res.redirect("/brands");
+    })
+    .catch(err => {
+        console.log(err);
+    })
 };
 

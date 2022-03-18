@@ -12,7 +12,6 @@ exports.knife_create_get = (req, res) => {
     })
     .catch((err) => {
         console.log(err);
-        //res.send("ERRRRORRRR!!!!!!");
     });
 };
 
@@ -22,7 +21,7 @@ exports.knife_create_post = (req, res) => {
 
     knife.save()
     .then(() => {
-        res.redirect("../");
+        res.redirect("/styles");
     })
     .catch((err) => {
         console.log(err);

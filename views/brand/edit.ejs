@@ -1,0 +1,27 @@
+<h1>
+    Edit Brand
+</h1>
+
+<form method="post" action="/brand/:id/update?_method=PUT">
+
+    <div>
+        <label>Brand Name: </label>
+        <input type="text" name="name" value="<%= brand.name %>">
+    </div>
+
+    <div>
+        <label>Logo: </label>
+        <input type="text" name="logo" value="<%= brand.logo %>">
+    </div>
+    <div>
+        <label>Description: </label>
+        <input type="text" name="description" value="<%= brand.description %>">
+    </div>
+
+   
+
+    <input type="hidden" name="id" value="<%= brand._id %>">
+
+    <button type="submit">Edit Brand</button>
+
+</form>
