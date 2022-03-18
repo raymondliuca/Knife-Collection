@@ -12,7 +12,7 @@ exports.style_create_post = (req, res) => {
 
     style.save()
     .then(() => {
-        res.redirect("../");
+        res.redirect("/styles");
     })
     .catch((err) => {
         console.log(err);

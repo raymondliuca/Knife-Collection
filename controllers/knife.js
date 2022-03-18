@@ -21,7 +21,7 @@ exports.knife_create_post = (req, res) => {
 
     knife.save()
     .then(() => {
-        res.redirect("/styles");
+        res.redirect("../");
     })
     .catch((err) => {
         console.log(err);

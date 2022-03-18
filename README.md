@@ -4,11 +4,11 @@ Here are my knives from Japan afor browsing, I weill upload more in the future!
 
 # Screenshots
 
-![alt text]()
+![alt text](screenshots/1.png)
 
-![alt text]()
+![alt text](screenshots/2.png)
 
-![alt text]()
+![alt text](screenshots/2.png)
 
 # Technologies Used 
 - HTML
