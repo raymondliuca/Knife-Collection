@@ -43,3 +43,34 @@ exports.style_show_get = (req, res) => {
         console.log(err);
     });
 };
+
+exports.style_delete_get = (req, res) => {
+    console.log(req.params.id);
+    Style.findByIdAndDelete(req.params.id)
+    .then(() => {
+        res.redirect("/styles")
+    })
+    .catch(err => {
+        console.log(err);
+    })
+};
+
+exports.style_edit_get = (req, res) =>{
+    Style.findById(req.params.id)
+    .then((style) => {
+        res.render("style/edit", {style})
+    })
+    .catch(err => {c
+        console.log(err);
+    })
+};
+
+exports.style_update_put = (req, res) => {
+    Style.findByIdAndUpdate(req.body.id, req.body)
+    .then(() => {
+        res.redirect("/styles");
+    })
+    .catch(err => {
+        console.log(err);
+    })
+};

@@ -1,5 +1,8 @@
-<h2> <%= knife.description %> </h2>
-
+<h1> <%= knife.description %> </h1>
+<div class="deleteAndEdit" >
+    <a href='/knife/<%= knife.id %>/delete'> Delete </a>
+    <a href='/knife/<%= knife.id %>/edit'> Edit </a>
+</div>
 <div>
     material: <%= knife.material %>
 </div>

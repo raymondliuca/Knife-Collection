@@ -1,0 +1,33 @@
+<h1>
+    Edit Knife
+</h1>
+
+<form method="post" action="/knife/:id/update?_method=PUT">
+
+    <div>
+        <label>Description: </label>
+        <input type="text" name="description" value="<%= knife.description %>">
+    </div>
+
+    <div>
+        <label>Picture: </label>
+        <input type="text" name="picture" value="<%= knife.picture %>">
+    </div>
+    <div>
+        <label>Material: </label>
+        <input type="text" name="material" value="<%= knife.material %>">
+    </div>
+    <div>
+        <label>Handle: </label>
+        <input type="text" name="handle" value="<%= knife.handle %>">
+    </div>
+    <div>
+        <label>Price: </label>
+        <input type="text" name="price" value="<%= knife.price %>">
+    </div>
+
+    <input type="hidden" name="id" value="<%= knife._id %>">
+
+    <button type="submit">Edit Knife</button>
+
+</form>

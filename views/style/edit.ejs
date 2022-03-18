@@ -1,0 +1,25 @@
+<h1>
+    Edit Style
+</h1>
+
+<form method="post" action="/style/:id/update?_method=PUT">
+
+    <div>
+        <label>Style Name: </label>
+        <input type="text" name="name" value="<%= style.name %>">
+    </div>
+
+    <div>
+        <label>Logo: </label>
+        <input type="text" name="picture" value="<%= style.picture %>">
+    </div>
+    <div>
+        <label>Description: </label>
+        <input type="text" name="description" value="<%= style.description %>">
+    </div>
+
+    <input type="hidden" name="id" value="<%= style._id %>">
+
+    <button type="submit">Edit Style</button>
+
+</form>
