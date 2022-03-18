@@ -1,6 +1,10 @@
 <h1> <%= welcomeMessage %> </h1>
 
+<% if(currentUser) { %> 
+    <% if(currentUser.isManager == true) { %> 
+        <a href="/brand/add"> Add a Brand</a>
+        <a href="/style/add"> Add a Style</a>
+        <a href="/knife/add"> Add a Knife</a>
+    <% } %>
+<% } %>
 
-<a href="/brand/add"> Add a Brand</a>
-<a href="/style/add"> Add a Style</a>
-<a href="/knife/add"> Add a Knife</a>

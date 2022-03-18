@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-
+    
+    <% if(alerts.validationErrors) { %> <% alerts.validationErrors.forEach(function(msg) { %>
+        <div class="alert alert-danger">
+          Your  <%= msg.param %> has 
+          <%= msg.msg %>
+        </div>
+        <% }) %> <% } %>
     <nav>
         <div class="nav">
             <a href="/">Ray's Knife Collection</a>&nbsp;
