@@ -11,10 +11,21 @@
 
     <nav>
         <div class="nav">
-            <a href="/">Ray's Knife Collection</a>
-            <a href="/brands/"> All Brands</a>
-            <a href="/styles/">All Styles</a>
+            <a href="/">Ray's Knife Collection</a>&nbsp;
+            <a href="/brands/"> All Brands</a>&nbsp;
+            <a href="/styles/">All Styles</a>&nbsp;
 
+
+        </div>
+
+        <div class="menuAlignment">
+            <% if(currentUser) { %> 
+                Hi <%= currentUser.firstName %>
+              <a href="/auth/logout">Logout</a>
+            <% } else { %>
+                <a href="/auth/signin">Signin</a> &nbsp;
+                <a href="/auth/signup">Create new account</a>
+            <% } %>
         </div>
 
 

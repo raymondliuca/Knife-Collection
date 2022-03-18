@@ -33,10 +33,7 @@ exports.knife_show_get = (req, res) => {
     console.log(req.params.id);
 
     Knife.findById(req.params.id)
-    .then(async knife => {
-        let brand = await Brand.findById(Knife.findById(req.params.id).brand);
-        let style = await Style.findById(Knife.findById(req.params.id).style);
-        console.log(Knife.findById(req.params.id));
+    .then(knife => {
         res.render("knife/detail", {knife})
     })
     .catch(err => {
