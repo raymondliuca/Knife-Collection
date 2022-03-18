@@ -1,16 +1,14 @@
-<h1><%= style.name %></h1>
-
 <div class="container">
     <div class="row">
-        <% knifes.forEach(function(knife) { %>
+        <% brands.forEach(function(brand) { %>
             <div class="col">
                 <div class="card">
                     <div class="card_img img_size">
-                        <img calss="img_size" src="<%= knife.picture %>" >
+                        <img calss="img_size" src="<%= brand.logo %>" >
                     </div>
                     <div class="name">
-                        <a href="/knife/<%= knife.id %>">
-                            <%= knife.description %>
+                        <a href="/brand/<%= brand.id %>">
+                            <%= brand.name %>
                         </a>
                     </div>
                 </div>

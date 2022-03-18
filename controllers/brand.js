@@ -1,5 +1,5 @@
 const Brand = require('../models/Brand');
-const Style = require("../models/Style");
+const Knife = require("../models/Knife");
 
 exports.brand_create_get = (req, res) => {
     res.render("brand/add");
@@ -19,15 +19,26 @@ exports.brand_create_post = (req, res) => {
     });
 };
 
-exports.brand_show_get = (req, res) => {
-    console.log(req.params.id);
-
-    Brand.findById(req.params.id)
-    .then(async brand => {
-        let styles = await Style.find({brand: req.params.id});
-        res.render("brand/detail", {brand, styles})
+exports.brand_index_get = (req, res) => {
+    Brand.find()
+    .then(brands => {
+        res.render("brand/index", {brands: brands})
     })
     .catch(err => {
         console.log(err);
     });
 };
+
+exports.brand_show_get = (req, res) => {
+    console.log(req.params.id);
+
+    Brand.findById(req.params.id)
+    .then(async brand => {
+        let knifes = await Knife.find({brand: req.params.id});
+        res.render("brand/detail", {brand, knifes})
+    })
+    .catch(err => {
+        console.log(err);
+    });
+};
+

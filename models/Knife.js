@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 const knifeSchema = mongoose.Schema(
     {
         picture: String,
-        length: String,
+        description: String,
+        material: String,
+        handle: String,
         price: String,
         style: {
             type: mongoose.Schema.Types.ObjectId,

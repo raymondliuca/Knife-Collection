@@ -2,8 +2,36 @@
 
 <form method="post" action="/knife/add">
     <div>
-        <label>Length: </label>
-        <input type="text" name="length">
+        <label>Brand</label>
+        <select name="brand">
+            <% brands.forEach(function(brand) { %>
+                <option value="<%= brand.id %>"> <%= brand.name %> </option>
+            <% }) %>
+        </select>
+    </div>
+    
+    <div>
+        <label>Style: </label>
+        <select name="style">
+            <% styles.forEach(function(style) { %>
+                <option value="<%= style.id %>"> <%= style.name %> </option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div>
+        <label>Description: </label>
+        <input type="text" name="description">
+    </div>
+
+    <div>
+        <label>Material: </label>
+        <input type="text" name="material">
+    </div>
+
+    <div>
+        <label>Handle: </label>
+        <input type="text" name="handle">
     </div>
 
     <div>
@@ -16,6 +44,6 @@
         <input type="text" name="price">
     </div>
 
-    <button type="submit">Add a Brand</button>
+    <button type="submit">Add a Knife</button>
 
 </form>

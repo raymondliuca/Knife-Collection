@@ -4,13 +4,7 @@ const styleSchema = mongoose.Schema(
     {
         name: String,
         picture: String,
-        material: String,
-        handle: String,
-        description: String,
-        brand: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Brand'
-        }
+        description: String
     },
     {
         timestamps: true

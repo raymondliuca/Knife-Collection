@@ -4,22 +4,3 @@
 <a href="/brand/add"> Add a Brand</a>
 <a href="/style/add"> Add a Style</a>
 <a href="/knife/add"> Add a Knife</a>
-
-<div class="container">
-    <div class="row">
-        <% brands.forEach(function(brand) { %>
-            <div class="col">
-                <div class="card">
-                    <div class="card_img img_size">
-                        <img calss="img_size" src="<%= brand.logo %>" >
-                    </div>
-                    <div class="name">
-                        <a href="/brand/<%= brand.id %>">
-                            <%= brand.name %>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        <% }) %>
-    </div>
-</div> 

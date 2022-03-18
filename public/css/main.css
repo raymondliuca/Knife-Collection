@@ -33,7 +33,7 @@ div {
     position: relative;
 }
 .img_size {
-    height: 250px;
+    height: 200px;
 }
 
 .card .card_img img {
@@ -66,3 +66,7 @@ div {
     background-color: red;
 }
 
+.detail img{
+    height: 350px;
+    width: 350px;
+}

@@ -2,15 +2,15 @@
 
 <div class="container">
     <div class="row">
-        <% styles.forEach(function(style) { %>
+        <% knifes.forEach(function(knife) { %>
             <div class="col">
                 <div class="card">
                     <div class="card_img img_size">
-                        <img calss="img_size" src="<%= style.picture %>" >
+                        <img calss="img_size" src="<%= knife.picture %>" >
                     </div>
                     <div class="name">
-                        <a href="/:id=<%= style.id %>">
-                            <%= style.name %>
+                        <a href="/knife/<%= knife.id %>">
+                            <%= knife.description %>
                         </a>
                     </div>
                 </div>
@@ -18,4 +18,3 @@
         <% }) %>
     </div>
 </div> 
-
