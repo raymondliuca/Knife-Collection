@@ -20,7 +20,7 @@ Here are my knives from Japan afor browsing, I weill upload more in the future!
 
 # Getting Started
 
-## [Come and Buy!](https://raysknifecollection.herokuapp.com//)
+## [Come and Buy!](https://raysknifecollection.herokuapp.com)
 
 # Future Enhancements
 
