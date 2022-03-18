@@ -10,11 +10,7 @@ const styleSchema = mongoose.Schema(
         brand: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Brand'
-        },
-        knives: [ {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Knife'
-        }]
+        }
     },
     {
         timestamps: true

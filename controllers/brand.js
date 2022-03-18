@@ -22,9 +22,10 @@ exports.brand_create_post = (req, res) => {
 exports.brand_show_get = (req, res) => {
     console.log(req.params.id);
 
-    Brand.findById(req.params.id).populate('styles')
-    .then(brand => {
-        res.render("brand/detail", {brand, moment})
+    Brand.findById(req.params.id)
+    .then(async brand => {
+        let styles = await Style.find({brand: req.params.id});
+        res.render("brand/detail", {brand, styles})
     })
     .catch(err => {
         console.log(err);

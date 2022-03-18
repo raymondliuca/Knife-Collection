@@ -1,0 +1,43 @@
+<h1>Add A Style</h1>
+
+<form method="post" action="/style/add">
+
+    <div>
+        <label>Brand</label>
+        <select name="brand">
+            <% brands.forEach(function(brand) { %>
+                <option value="<%= brand.id %>"> <%= brand.name %> </option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div>
+        <label>Name: </label>
+        <input type="text" name="name">
+    </div>
+
+    <div>
+        <label>Picture's URL: </label>
+        <input type="text" name="picture">
+    </div>
+
+    <div>
+        <label>Description: </label>
+        <input type="text" name="description">
+    </div>
+
+    <div>
+        <label>Material: </label>
+        <input type="text" name="material">
+    </div>
+
+    <div>
+        <label>Handle: </label>
+        <input type="text" name="handle">
+    </div>
+
+    <button type="submit">Add a Brand</button>
+
+</form>
+
+

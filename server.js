@@ -16,10 +16,13 @@ app.set("view engine", "ejs");
 
 const indexRoute = require('./routes/index');
 const brandRoute = require('./routes/brand');
+const styleRoute = require('./routes/style');
+const knifeRoute = require('./routes/knife');
 
 app.use('/', indexRoute);
 app.use('/', brandRoute);
-
+app.use('/', styleRoute);
+app.use('/', knifeRoute);
 
 
 mongoose.connect(process.env.mongoDBURL, {
