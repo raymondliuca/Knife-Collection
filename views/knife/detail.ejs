@@ -1,8 +1,16 @@
 <h1> <%= knife.description %> </h1>
-<div class="deleteAndEdit" >
-    <a href='/knife/<%= knife.id %>/delete'> Delete </a>
-    <a href='/knife/<%= knife.id %>/edit'> Edit </a>
+
+<div class="add">
+    <% if(currentUser) { %> 
+        <% if(currentUser.isManager == true) { %> 
+            <div class="deleteAndEdit" >
+                <a href='/knife/<%= knife.id %>/delete'> Delete </a>&nbsp;
+                <a href='/knife/<%= knife.id %>/edit'> Edit </a>
+            </div>
+        <% } %>
+    <% } %>
 </div>
+
 <div>
     material: <%= knife.material %>
 </div>

@@ -31,10 +31,10 @@ exports.knife_create_post = (req, res) => {
 
 exports.knife_show_get = (req, res) => {
     console.log(req.params.id);
-
+    currentUser = req.user;
     Knife.findById(req.params.id)
     .then(knife => {
-        res.render("knife/detail", {knife})
+        res.render("knife/detail", {knife, currentUser})
     })
     .catch(err => {
         console.log(err);

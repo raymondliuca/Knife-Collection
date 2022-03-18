@@ -7,9 +7,15 @@ h1 {
 .deleteAndEdit {
     text-align: center;
 }
-
+nav {
+    margin: 0 250px 0 250px
+}
 div {
     display: block;
+}
+.add {
+    font-size: 35px;
+    text-align: center;
 }
 .container {
     margin: 0 auto 0 auto;
@@ -62,12 +68,14 @@ div {
     border-top: 1px solid rgba(160,160,160,0.2);
     padding: 16px 24px;
 }
-.nav{
+nav .nav{
     float: left;
+    font-size: 16px;
 }
 
-.menuAlignment {
+nav .menuAlignment {
     text-align: right;
+    font-size: 16px;
 }
 
 .alert-danger {

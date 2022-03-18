@@ -31,11 +31,11 @@ exports.brand_index_get = (req, res) => {
 
 exports.brand_show_get = (req, res) => {
     console.log(req.params.id);
-
+    currentUser = req.user;
     Brand.findById(req.params.id)
     .then(async brand => {
         let knifes = await Knife.find({brand: req.params.id});
-        res.render("brand/detail", {brand, knifes})
+        res.render("brand/detail", {brand, knifes, currentUser})
     })
     .catch(err => {
         console.log(err);

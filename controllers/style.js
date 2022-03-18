@@ -33,11 +33,11 @@ exports.style_index_get = (req, res) => {
 
 exports.style_show_get = (req, res) => {
     console.log(req.params.id);
-
+    currentUser = req.user;
     Style.findById(req.params.id)
     .then(async style => {
         let knifes = await Knife.find({style: req.params.id});
-        res.render("style/detail", {style, knifes})
+        res.render("style/detail", {style, knifes, currentUser})
     })
     .catch(err => {
         console.log(err);

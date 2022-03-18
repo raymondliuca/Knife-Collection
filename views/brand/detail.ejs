@@ -1,9 +1,16 @@
 <h1><%= brand.name %></h1>
 
-<div class="deleteAndEdit" >
-    <a href='/brand/<%= brand.id %>/delete'> Delete </a>
-    <a href='/brand/<%= brand.id %>/edit'> Edit </a>
+<div class="add">
+    <% if(currentUser) { %> 
+        <% if(currentUser.isManager == true) { %> 
+            <div class="deleteAndEdit" >
+                <a href='/brand/<%= brand.id %>/delete'> Delete </a>&nbsp;
+                <a href='/brand/<%= brand.id %>/edit'> Edit </a>
+            </div>
+        <% } %>
+    <% } %>
 </div>
+
 <div class="container">
     <div class="row">
         <% knifes.forEach(function(knife) { %>
