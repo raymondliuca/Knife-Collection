@@ -28,7 +28,7 @@ const userSchema = mongoose.Schema({
     },
     isManager: {
         type: Boolean,
-        default: false
+        default: true
     }
 }
 ,
